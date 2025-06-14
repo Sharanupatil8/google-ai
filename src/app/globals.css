@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Red and Black Theme */
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 10%; /* Dark Gray / Near Black for text */
+
+    --card: 0 0% 98%; /* Very Light Gray for cards, or 0 0% 100% for white */
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 80% 50%; /* Vibrant Red (e.g., #FF4040) */
+    --primary-foreground: 0 0% 100%; /* White text for primary buttons */
+
+    --secondary: 0 0% 15%; /* Dark Gray/Black for secondary elements */
+    --secondary-foreground: 0 0% 98%; /* Light text for secondary elements */
+
+    --muted: 0 0% 94%; /* Light Gray for muted backgrounds */
+    --muted-foreground: 0 0% 40%; /* Darker Gray for muted text */
+
+    --accent: 0 70% 45%; /* Slightly darker or alternative Red (e.g., #D92A2A) */
+    --accent-foreground: 0 0% 100%; /* White text for accent buttons */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 88%; /* Gray border */
+    --input: 0 0% 95%; /* Light gray for input backgrounds */
+    --ring: 0 80% 50%; /* Ring color to match primary red */
+
+    --chart-1: 0 70% 50%; /* Red */
+    --chart-2: 0 0% 30%;  /* Dark Gray */
+    --chart-3: 0 50% 40%;  /* Muted Red */
+    --chart-4: 0 0% 50%;  /* Medium Gray */
+    --chart-5: 0 80% 60%;  /* Brighter Red */
+    --radius: 0.5rem;
+
+    /* Sidebar colors (can be adjusted if sidebar is heavily used) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 90%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 0 80% 50%;
+  }
+
+  .dark {
+    /* Dark theme variant with red accents */
+    --background: 0 0% 8%; /* Very Dark Gray / Near Black */
+    --foreground: 0 0% 95%; /* Light Gray / White for text */
+
+    --card: 0 0% 12%; /* Dark Gray for cards */
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 80% 55%; /* Slightly lighter vibrant Red for dark mode */
+    --primary-foreground: 0 0% 100%; 
+
+    --secondary: 0 0% 25%; 
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 70% 50%; /* Red accent for dark mode */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 0 80% 55%;
+
+    --chart-1: 0 70% 55%;
+    --chart-2: 0 0% 70%;
+    --chart-3: 0 50% 45%;
+    --chart-4: 0 0% 50%;
+    --chart-5: 0 80% 65%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 0 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Subtle animation for interactive elements */
+@layer utilities {
+  .transition-transform-subtle {
+    @apply transition-transform duration-200 ease-in-out;
+  }
+  .hover-lift {
+    @apply hover:-translate-y-1;
+  }
+}
