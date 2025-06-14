@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ArrowRight, Car, MapPin, CheckCircle, ShieldCheck, Users, Sparkles } from 'lucide-react';
 import { carModels } from '@/lib/data';
 
+
 export default function Home() {
   const featuredCars = carModels.slice(0, 3); // Show first 3 cars as featured
 
@@ -14,7 +15,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center text-center rounded-xl overflow-hidden shadow-2xl">
         <Image
-          src="https://placehold.co/1600x900.png"
+          src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600"
           alt="Modern cars lineup"
           layout="fill"
           objectFit="cover"

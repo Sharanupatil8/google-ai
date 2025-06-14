@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**', // Ensure this allows for various placeholder URLs
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        port: '',
+        pathname: '/**', // Ensure this allows for various placeholder URLs
+      },
     ],
   },
 };
