@@ -1,7 +1,10 @@
-import {genkit} from 'genkit';
-import {googleAI} from '@genkit-ai/googleai';
+// genkit.config.ts
+import { defineConfig } from '@genkit-ai/core';
+import { googleAI } from '@genkit-ai/googleai';
 
-export const ai = genkit({
+export default defineConfig({
   plugins: [googleAI()],
-  model: 'googleai/gemini-2.0-flash',
+  tracing: {
+    provider: 'none', // disables OpenTelemetry to fix the Jaeger error
+  },
 });
