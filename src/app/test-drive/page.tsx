@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { TestDriveForm } from "@/components/forms/TestDriveForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Metadata } from 'next';
@@ -18,7 +19,9 @@ export default function TestDrivePage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <TestDriveForm />
+          <Suspense fallback={<p className="text-muted-foreground">Loading form...</p>}>
+            <TestDriveForm />
+          </Suspense>
         </CardContent>
       </Card>
     </div>
